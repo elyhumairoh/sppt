@@ -8,11 +8,11 @@ class Permohonan extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_izin','izin',true);
 		$this->load->model('M_wilayah','wil',true);
-		$this->load->model('M_izin','izin',true);
 	}
 
 	public function index()
 	{
+            if($this->session->userdata('login')){
 		$data = array(
 					'konten'=>'permohonan/Permohonan',
 					'listjenisizin'=>$this->izin->getjenisizin(),
@@ -20,7 +20,9 @@ class Permohonan extends CI_Controller {
 					'dataizinsiup'=>$this->izin->getDataizinsiup(),
 					'dataizintdp'=>$this->izin->getDataizintdp()
 					);
-		$this->load->view('template/Template',$data);
+            $this->load->view('template/Template',$data);}
+            else
+                redirect('Login');
 	}
 
 	public function loadform(){

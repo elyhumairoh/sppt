@@ -15,16 +15,29 @@ class Login extends CI_Controller {
 			'konten'=>'login/Login',
 		);
 
-		$this->load->view('template/Template',$data);           
+		$this->load->view('template/Template2',$data);           
                
 	}
 
 	public function ceklogin(){
                 
-        if($this->login->cek()){
+        if($this->login->cek()=='1'){
                
        		redirect('permohonan');
-        } else{   
+        }
+        else if($this->login->cek()=='2')
+		{
+			redirect('verifikasi/petugas');
+		}
+        else if($this->login->cek()=='3')
+            echo 'anda login sebagai kasubid';
+        else if($this->login->cek()=='4')
+            echo 'anda login sebagai kabid';
+        else if($this->login->cek()=='5')
+            echo 'anda login sebagai kabad';
+        else if($this->login->cek()=='6')
+            echo 'anda login sebagai admin';
+        else{   
             echo 'anda gagal login';
         }
 	}

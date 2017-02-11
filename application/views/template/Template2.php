@@ -29,22 +29,22 @@
 
        
 
-        <div id="page-wrapper" class="gray-bg">
+       <!--  <div id="page-wrapper" class="gray-bg">
         <div class="row border-bottom">
-        <?php $this->load->view('template/Header'); ?>
+        <?php $this->load->view('template/Header'); ?> -->
         </div>
             
-        <div class="row">
-            <div class="col-lg-12">
+        <!-- <div class="row">
+            <div class="col-lg-12"> -->
                 <div class="wrapper wrapper-content">
                     
                 <?php $this->load->view($konten); ?>
 
 
                 </div>
-            </div>
-        </div>
-            <div class="footer">
+            <!-- </div>
+        </div> -->
+           <!--  <div class="footer">
                 <div class="pull-right">
                     Badan Penanaman Modal dan Pelayanan Perizinan Terpadu
                 </div>
@@ -52,9 +52,9 @@
                     <strong>Copyright</strong> Pemerintah Kabupaten Lombok Barat; 2016-2017
                 </div>
             </div>
-
-        </div>
-        </div>
+ -->
+      <!--   </div>
+        </div> -->
 
     <!-- Mainly scripts -->
     <script src="<?php echo base_url('assets/js/jquery-2.1.1.js') ?>"></script>
